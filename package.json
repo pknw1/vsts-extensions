@@ -1,0 +1,23 @@
+{
+  "name": "vsts-extensions",
+  "version": "1.0.0",
+  "description": "https://docs.microsoft.com/en-us/vsts/extend/publish/overview?view=vsts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pknw1/vsts-extensions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pknw1/vsts-extensions/issues"
+  },
+  "homepage": "https://github.com/pknw1/vsts-extensions#readme",
+  "dependencies": {
+    "vss-web-extension-sdk": "^5.141.0"
+  }
+}
