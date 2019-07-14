@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <script src="lib/VSS.SDK.min.js"></script>
+
+    <script type="text/javascript">
+        VSS.init({
+            usePlatformScripts: true,
+            usePlatformStyles: true,
+            explicitNotifyLoaded: true
+        });
+        
+        // Wait for the SDK to be initialized then load a script
+        VSS.require(["inspector/launch"], function (items) {
+            VSS.notifyLoadSucceeded();            
+        });
+        
+    </script>
+</head>
+
+</html>

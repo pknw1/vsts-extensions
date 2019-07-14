@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Associated Items</title>
+    <meta charset="UTF-8">
+    <script src="lib/VSS.SDK.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />    
+</head>
+<body>
+    <script type="text/javascript">
+        // Initialize the VSS sdk
+        VSS.init({
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        // Wait for the SDK to be initialized then load a script
+        VSS.require(["inspector/associatedItems"], function (items) { });
+    </script>
+    <div class="hub-view explorer">
+        <div class="splitter horizontal hub-splitter">
+            <div class="leftPane">
+                <div class="left-hub-content">
+                    <div id="tree-container"></div>
+                </div>
+            </div>
+            <div class="handleBar"></div>
+            <div class="rightPane">
+                <div class="hub-title"></div>
+                <div class="right-hub-content">
+                    <div class="commit-grid-container"></div>
+                    <div class="workitem-grid-container"></div>
+                    <div class="commit-content-container"></div>
+                    <div class="workitem-content-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

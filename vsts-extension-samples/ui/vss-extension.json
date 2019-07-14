@@ -1,0 +1,143 @@
+{
+    "manifestVersion": 1.0,
+    "id": "samples-ui",
+    "version": "0.1.8",
+    "name": "UI Controls (Sample)",
+    "description": "Explore different UI controls, including menus, toolbars, custom controls, and more.",
+    "publisher": "fabrikam",
+    "public": false,
+    "icons": {
+        "default": "images/fabrikam-logo.png"
+    },
+    "categories": [
+        "Developer samples"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.code",
+        "vso.build"  
+    ],
+    "files": [
+        {
+            "path": "images",
+            "addressable": true
+        },
+        {
+            "path": "menu",
+            "addressable": true
+        },
+        {
+            "path": "compare-to-form.html",
+            "addressable": true
+        },
+        {
+            "path": "bower_components/vss-web-extension-sdk/lib/VSS.SDK.min.js",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "sample-hub-group",
+            "type": "ms.vss-web.hub-group",
+            "description": "Adds a 'Sample UI' hub group",
+            "targets": [
+                "ms.vss-web.project-hub-groups-collection"
+            ],
+            "properties": {
+                "name": "Sample UI",
+                "order": 100
+            }
+        },
+        {
+            "id": "simple-menu-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Simple' hub to the 'Sample UI' hub group to show basic usage of the menu control.",
+            "targets": [
+                ".sample-hub-group"
+            ],
+            "properties": {
+                "name": "Simple",
+                "order": 100,
+                "uri": "menu/simple.html"
+            }
+        },
+        {
+            "id": "sample-action-provider",
+            "type": "ms.vss-web.action-provider",
+            "targets": [
+                "ms.vss-code-web.source-grid-item-menu"
+            ],
+            "properties": {
+                "group": "contributed",
+                "uri": "menu/dynamic.html"
+            }
+        },
+        {
+            "id": "control-menu-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Custom Control' hub to the 'Sample UI' hub group to show more advanced use of the menu control.",
+            "targets": [
+                ".sample-hub-group"
+            ],
+            "properties": {
+                "name": "Custom Control",
+                "order": 100,
+                "uri": "menu/control.html"
+            }
+        },
+        {
+            "id": "dropdown-menu-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Dropdown' hub to the 'Sample UI' hub group to show usage of a dropdown menu.",
+            "targets": [
+                ".sample-hub-group"
+            ],
+            "properties": {
+                "name": "Dropdown",
+                "order": 100,
+                "uri": "menu/dropDown.html"
+            }
+        },
+        {
+            "id": "context-menu-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Context Menu' hub to the 'Sample UI' hub group to show usage of a context menu.",
+            "targets": [
+                ".sample-hub-group"
+            ],
+            "properties": {
+                "name": "Context Menu",
+                "order": 100,
+                "uri": "menu/context.html"
+            }
+        },
+        {
+            "id": "compare-menu-action",
+            "type": "ms.vss-web.action",
+            "description": "Adds a 'Compare...' menu item to context menus on files from the Code Explore view which demonstrates how to raise modal dialogs to collect information.",
+            "targets": [
+                "ms.vss-code-web.source-item-menu"
+            ],
+            "properties": {
+                "title": "Compare...",
+                "icon": "images/show-properties.png",
+                "group": "actions",
+                "uri": "menu/contributions.html"
+            }
+        },
+        {
+            "id": "compare-to-form",
+            "type": "ms.vss-web.control",
+            "description": "The content to show within the contributed Compare... menu item of this extension.",
+            "targets": [],
+            "properties": {
+                "uri": "compare-to-form.html"
+            }
+        }
+    ]
+}

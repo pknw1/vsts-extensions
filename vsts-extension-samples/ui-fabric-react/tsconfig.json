@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "node",
+        "target": "es5",
+        "noImplicitAny": false,
+        "lib": ["es5", "es6", "dom"],
+        "jsx": "react",
+        "sourceMap": false,
+        "paths": {
+            "OfficeFabric/*": ["node_modules/office-ui-fabric-react/lib-amd/*"]
+        },
+        "baseUrl": "./",
+        "types": ["q", "react", "react-dom"]
+    },
+    "include": [
+        "scripts/WorkItemSearchComponent.tsx"
+    ]
+}

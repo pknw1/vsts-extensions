@@ -6,7 +6,7 @@
     "name": "pknw1plex",
     "description": "A sample Visual Studio Services extension",
     "public": false,
-    "categories": ["Azure Pipelines"],
+    "categories": ["Azure Repos"],
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
